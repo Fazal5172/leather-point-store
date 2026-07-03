@@ -160,9 +160,3 @@ Use these pre-seeded users to test out both roles immediately:
   - **Password:** `adminpassword`
 
 ---
-
-## 🎓 Showcase Highlights for Recruiters
-- **Strict OOP Principles:** Standardised classes with dedicated responsibilities. Separation of templates, controllers, and models.
-- **Relational Integrity:** Foreign key definitions (cascade deletions on categories and subcategories), indexing optimizations, and InnoDB specifications.
-- **Secure Transaction Commits:** Order placement uses DB transactions, executing rollbacks on system failures to protect stock count balances.
-- **Graceful Error Resilience:** No database connectivity limits usability during brief showcase evaluations — simulated state persists throughout sessions.
