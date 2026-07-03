@@ -1,0 +1,27 @@
+# ── Sensitive config ──────────────────────────────────────────
+config/config.local.php
+config/config.php
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store
+Thumbbs.db
+desktop.ini
+
+# ── IDE / Editor ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs & temp ───────────────────────────────────────────────
+*.log
+*.tmp
+/tmp/
+
+# ── PHP dependency managers ───────────────────────────────────
+/vendor/
+composer.lock
+
+# ── Node (if ever added) ─────────────────────────────────────
+node_modules/
