@@ -54,18 +54,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             
             <!-- Logo -->
             <a href="index.php" class="flex items-center gap-2">
-                <span class="text-2xl font-black uppercase tracking-wider text-leather-800">
-                    👜 Leather Point <span class="text-leather-500 font-light">Store</span>
+                <span class="text-2xl font-black uppercase tracking-wider text-leather-800 whitespace-nowrap">
+                    👜 Leather Point <span class="text-leather-500 font-light whitespace-nowrap">Store</span>
                 </span>
             </a>
 
             <!-- Nav Items -->
-            <nav class="flex items-center gap-6 text-sm font-semibold text-gray-700">
+            <nav class="flex items-center gap-6 text-sm font-semibold text-gray-700 whitespace-nowrap">
                 <a href="index.php" class="hover:text-leather-600 transition">Shop</a>
                 <a href="feedback.php" class="hover:text-leather-600 transition">Feedback</a>
                 
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <a href="order-status.php" class="hover:text-leather-600 transition">My Orders</a>
+                    <a href="order-status.php" class="hover:text-leather-600 transition whitespace-nowrap">My Orders</a>
                     <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
                         <a href="admin/dashboard.php" class="bg-red-50 text-red-700 px-3 py-1 rounded-full border border-red-200 hover:bg-red-100 transition">Admin Panel</a>
                     <?php endif; ?>
