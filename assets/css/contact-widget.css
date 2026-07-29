@@ -1,0 +1,150 @@
+/* ==========================================
+   Developer Contact Widget
+   ========================================== */
+
+   .contact-widget {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+}
+
+/* Floating Button */
+
+.contact-toggle {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #1a3c5e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    transition: all .3s ease;
+}
+
+.contact-toggle:hover {
+    transform: translateY(-4px) scale(1.05);
+    background: #15304d;
+}
+
+/* Contact Panel */
+
+.contact-panel {
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+
+    width: 260px;
+
+    background: #fff;
+    border-radius: 14px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: all .3s ease;
+}
+
+/* Show panel */
+
+.contact-widget.active .contact-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Header */
+
+.contact-header {
+    background: #1a3c5e;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+}
+
+.contact-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.contact-header p {
+    margin-top: 6px;
+    font-size: 13px;
+    opacity: .9;
+}
+
+/* Links */
+
+.contact-panel a {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    color: #333;
+    text-decoration: none;
+
+    border-bottom: 1px solid #ececec;
+
+    transition: .25s;
+}
+
+.contact-panel a:last-child {
+    border-bottom: none;
+}
+
+.contact-panel a i {
+
+    width: 22px;
+    font-size: 20px;
+
+    text-align: center;
+}
+
+/* Hover */
+
+.contact-panel a:hover {
+
+    background: #f5f7fb;
+    color: #1a3c5e;
+
+    padding-left: 24px;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.contact-widget{
+
+right:15px;
+bottom:15px;
+
+}
+
+.contact-panel{
+
+width:220px;
+
+}
+
+.contact-toggle{
+
+width:55px;
+height:55px;
+
+font-size:22px;
+
+}
+
+}
