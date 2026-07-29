@@ -39,5 +39,7 @@
             <div class="text-leather-400 font-semibold uppercase tracking-widest text-[10px]">Academic Portfolio </div>
         </div>
     </footer>
+    <?php include __DIR__ . '/contact-widget.php'; ?>
+    <script src="<?= APP_URL ?>/assets/js/contact-widget.js"></script>
 </body>
 </html>
