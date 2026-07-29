@@ -1,4 +1,6 @@
 <?php
+
+require_once "includes/init.php";
 require_once "includes/header.php";
 
 // Metrics calculations (Admin 3 metrics)

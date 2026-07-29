@@ -1,4 +1,6 @@
 <?php
+
+require_once "includes/init.php";
 require_once "includes/header.php";
 
 // If already logged in, redirect them away from the login page immediately

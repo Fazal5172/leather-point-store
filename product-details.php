@@ -1,4 +1,6 @@
 <?php
+
+require_once "includes/init.php";
 require_once "includes/header.php";
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;

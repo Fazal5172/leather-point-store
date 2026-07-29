@@ -6,7 +6,7 @@ if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin') {
     header("Location: admin/dashboard.php");
     exit;
 }
-
+require_once "includes/init.php";
 require_once "includes/header.php";
 
 

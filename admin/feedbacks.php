@@ -1,4 +1,6 @@
 <?php
+
+require_once "includes/init.php";
 require_once "includes/header.php";
 
 // Fetch general feedbacks (Admin 3 feed reader)
