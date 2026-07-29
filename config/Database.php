@@ -28,8 +28,6 @@ class Database {
                 ]
             );
         } catch(PDOException $exception) {
-            // Note: In real production systems, errors are logged silently, 
-            // but for a portfolio demo, we capture it to show to recruiters.
             error_log("Connection failed: " . $exception->getMessage());
         }
         return $this->conn;
