@@ -1,8 +1,6 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-require_once __DIR__ . "/../config/Database.php";
+
+require_once __DIR__ . "/../config/bootstrap.php";
 require_once __DIR__ . "/../classes/User.php";
 require_once __DIR__ . "/../classes/Product.php";
 require_once __DIR__ . "/../classes/Order.php";
@@ -107,6 +105,10 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leather Point Store</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="<?= APP_URL ?>/assets/css/contact-widget.css">
+
     <!-- Tailwind CSS with custom Amber-Tan Leather style Configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
