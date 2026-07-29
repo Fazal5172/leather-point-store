@@ -19,48 +19,62 @@ A professional, e-commerce web application developed in **Object-Oriented PHP (O
 leather-point-store/
 │
 ├── config/
-│   └── Database.php          # Database Connection class (PDO Pattern)
+│   ├── app.php               # Application configuration (APP_URL & global settings)
+│   ├── bootstrap.php         # Centralized application initialization
+│   ├── Database.php          # Database Connection class (PDO Pattern)
+│   └── developer.php         # Developer contact & portfolio configuration
 │
 ├── classes/
-│   ├── User.php              # Auth operations, profiles & directories
-│   ├── Product.php           # Catalog, filtering & categories CRUD
-│   ├── Order.php             # Checkout transactions, stocks, notification simulator
-│   └── Review.php            # Rating reviews & feedback channels
+│   ├── User.php              # Authentication, profiles & customer management
+│   ├── Product.php           # Product catalog & inventory operations
+│   ├── Order.php             # Checkout, order processing & notifications
+│   └── Review.php            # Product ratings & customer reviews
 │
 ├── includes/
-│   ├── header.php            # Nav, UI fallbacks, responsive header
-│   └── footer.php            # Info footers, login quick references
+│   ├── init.php              # Customer application initialization
+│   ├── header.php            # Storefront navigation & page header
+│   ├── footer.php            # Footer layout & shared scripts
+│   └── contact-widget.php    # Floating developer contact widget
 │
-├── admin/                    # Administrative Desk Panel
+├── admin/                    # Administrative Control Panel
 │   ├── includes/
-│   │   ├── header.php        # Admin sidebar navigation
-│   │   └── footer.php
-│   ├── dashboard.php         # Metric panels (Admin 3)
-│   ├── categories.php        # Category CRUD (Admin 4)
-│   ├── subcategories.php     # Subcategory CRUD (Admin 5)
-│   ├── products.php          # Inventory Stock Management CRUD (Admin 2)
-│   ├── users.php             # Customer Directories directories (Admin 6, 7, 8)
-│   ├── orders.php            # Order Approvals & Cancel lists (Admin 9, 10)
-│   ├── feedbacks.php         # Feedbacks list reading
-│   └── logout.php
+│   │   ├── init.php          # Admin application initialization & authorization
+│   │   ├── header.php        # Admin sidebar & dashboard layout
+│   │   └── footer.php        # Admin footer
+│   ├── categories.php        # Category CRUD management
+│   ├── dashboard.php         # Dashboard metrics & statistics
+│   ├── feedbacks.php         # Customer feedback management
+│   ├── logout.php            # Terminates admin session
+│   ├── orders.php            # Order approval & management
+│   ├── products.php          # Inventory & product management
+│   ├── subcategories.php     # Subcategory CRUD management
+│   └── users.php             # Customer directory management│
+├── assets/
+│   ├── css/
+│   │   └── contact-widget.css    # Floating contact widget styles
+│   └── js/
+│       └── contact-widget.js     # Floating contact widget interactions
+│
+├── downloads/
+│   └── Fazal-Abbas-Shah-Resume.pdf    # Downloadable resume
 │
 ├── logs/
-│   └── receipt_notifications.log   # Simulated SMS & Email invoices trace file (FR8)
+│   └── receipt_notifications.log      # Simulated SMS & Email notification logs
 │
-├── index.php                 # Storefront catalog, multi-filter search (FR3)
-├── product-details.php       # Product page, ratings review panel (FR7)
-├── cart.php                  # Shopping Cart
-├── checkout.php              # COD/Credit Card selection checkout (FR4)
-├── order-status.php          # Specific status tracker & printable receipt (FR5, FR8)
-├── feedback.php              # General service feedback submissions (FR7)
-├── login.php                 # Secure login entry (FR2)
-├── register.php              # New user registration (FR1)
-├── logout.php                # Clears session cookies
+├── screenshots/              # README project screenshots
 │
-├── schema.sql                # Full database structures & seed variables
-└── README.md                 # Professional technical overview
-```
-
+├── index.php                 # Storefront catalog & product listing (FR3)
+├── product-details.php       # Product details & review page (FR7)
+├── cart.php                  # Shopping cart
+├── checkout.php              # Checkout & payment selection (FR4)
+├── order-status.php          # Order tracking & printable receipt (FR5, FR8)
+├── feedback.php              # Customer feedback submission (FR7)
+├── login.php                 # Secure user authentication (FR2)
+├── register.php              # Customer registration (FR1)
+├── logout.php                # User/Admin logout & session termination
+│
+├── schema.sql                # Database schema & sample data
+└── README.md                 # Professional project documentation
 ---
 
 ## 📋 Functional Requirements Map
