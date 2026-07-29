@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+require_once __DIR__ . '/config/bootstrap.php';
 
 if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin') {
     header("Location: admin/dashboard.php");
