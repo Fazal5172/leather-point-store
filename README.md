@@ -80,35 +80,104 @@ leather-point-store/
 ## 📋 Functional Requirements Map
 
 This application is fully responsive and implements all functional specifications using clean OOP models:
- ## Customer-Facing Requirements (FR)
+# Functional Requirements
+
+## Customer-Facing Requirements (FR)
 
 | Requirement ID | Description | OOP Implementation Path |
 | :--- | :--- | :--- |
-| **FR1: Registration** | Create a registration page for new users. | `register.php` utilizing `User::register()` with standard password hashing.<br><br>![register](screenshots/register.png) |
-| **FR2: Login** | Secure login credentials authentication. | `login.php` using `User::login()` verifying against hashed storage.<br><br>![login](screenshots/login.png) |
-| **FR3: Search Box** | Multi-attribute search (by name, price, and color). | `index.php` using `Product::getProducts()` utilizing multi-conditional dynamic SQL.<br><br>![home](screenshots/home.png) |
-| **FR4: Payment Methods** | Choose Credit Card or Cash On Delivery (COD). | `checkout.php` capturing inputs and storing choices in order rows.<br><br>![payment methods](screenshots/checkout.png) |
-| **FR5: Order Status** | Check order shipment status (Approved/Pending/Cancel). | `order-status.php` pulling status properties through `Order::getOrderDetails()`.<br><br>![Order Status](screenshots/my_orders.png) |
-| **FR6: Order History** | List complete historical customer purchases. | `order-status.php` listing orders via `Order::getUserOrders()`.<br><br>![Order History](screenshots/my_orders.png) |
-| **FR7: Reviews & Feedbacks** | Submit product review stars and general website feedback. | `product-details.php` using `Review::addProductReview()`; `feedback.php` using `Review::addWebsiteFeedback()`.<br><br>![Website Feedback Form](screenshots/feedback.png) |
-| **FR8: Confirm Receipt** | Simulate transaction copy receipt logging to phone & email. | `Order::simulateTransactionReceipt()` writing logs to `logs/receipt_notifications.log` displayed visually in real-time.<br><br>![Confirm Receipt](screenshots/order_details.png) |
+| **FR1: Registration** | Create a registration page for new users. | `register.php` using `User::register()` with secure password hashing. |
+| **FR2: Login** | Secure user authentication using stored credentials. | `login.php` using `User::login()` with password verification. |
+| **FR3: Search Box** | Multi-attribute product search by name, price, and color. | `index.php` using `Product::getProducts()` with dynamic SQL conditions. |
+| **FR4: Payment Methods** | Support Credit Card and Cash On Delivery (COD). | `checkout.php` storing selected payment methods with order records. |
+| **FR5: Order Status** | Customers can track order shipment status (Approved/Pending/Cancel). | `order-status.php` using `Order::getOrderDetails()`. |
+| **FR6: Order History** | Display customer's complete purchase history. | `order-status.php` using `Order::getUserOrders()`. |
+| **FR7: Reviews & Feedbacks** | Users can submit product reviews and website feedback. | `product-details.php` and `feedback.php` using Review methods. |
+| **FR8: Confirm Receipt** | Simulate transaction receipt notification logging. | `Order::simulateTransactionReceipt()` storing receipt notification logs. |
 
 
 ## Administrative Requirements (Admin)
 
 | Requirement ID | Description | OOP Implementation Path |
 | :--- | :--- | :--- |
-| **Admin 1: Admin Login** | Specialized administrator authorization gate. | `admin/includes/header.php` verification checks; secure login via `User::login()`.<br><br>![Admin Login](screenshots/login.png) |
-| **Admin 2: Stock Management** | Control item prices, specs, images, colors, and quantities. | `admin/products.php` performing edits using `Product::updateProduct()` & `Product::deleteProduct()`.<br><br>![Stock Management](screenshots/admin_manage_inventory.png) |
-| **Admin 3: Metric Dashboard** | View counts of users, orders, categories, and active feedback feeds. | `admin/dashboard.php` querying statistical records; `admin/feedbacks.php` listing messages.<br><br>![Metric Dashboard](screenshots/admin_dashboard.png) |
-| **Admin 4: Categories CRUD** | Add, edit, or delete item classifications. | `admin/categories.php` using `Product::addCategory()`, `Product::updateCategory()`, etc.<br><br>![Manage Categories](screenshots/admin_manage_categories.png) |
-| **Admin 5: Subcategories CRUD** | Add, edit, or delete related classifications. | `admin/subcategories.php` using `Product::addSubcategory()`, `Product::updateSubcategory()`, etc.<br><br>![Manage Sub-categories](screenshots/admin_manage_subcategories.png) |
-| **Admin 6: Customers Directory** | List all registered non-admin users. | `admin/users.php` listing database directories using `User::getAllUsers()`.<br><br>![Manage Users](screenshots/admin_manage_users.png) |
-| **Admin 7: Delete Users** | Remove accounts from the store directories. | `admin/users.php` using `User::deleteUser()`.<br><br>![Manage Users](screenshots/admin_manage_users.png) |
-| **Admin 8: Update Users** | Edit name, email, and contact details of existing profiles. | `admin/users.php` editing profiles using `User::updateUserInfo()`.<br><br>![Manage Users](screenshots/admin_manage_users.png) |
-| **Admin 9: Orders History** | Inspect and monitor all customer booking logs. | `admin/orders.php` listing overall histories via `Order::getAllOrders()`.<br><br>![Orders History](screenshots/my_orders.png) |
-| **Admin 10: Approve / Cancel** | Approve orders for dispatch or cancel bookings. | `admin/orders.php` toggling states using `Order::updateStatus()`.<br><br>![Orders Status](screenshots/my_orders.png) |
----
+| **Admin 1: Admin Login** | Secure administrator authentication. | `admin/includes/header.php` with role verification. |
+| **Admin 2: Stock Management** | Manage product prices, specifications, images, colors, and quantities. | `admin/products.php` using Product CRUD methods. |
+| **Admin 3: Dashboard Metrics** | View users, orders, categories, and feedback statistics. | `admin/dashboard.php` with database statistics queries. |
+| **Admin 4: Categories CRUD** | Create, update, and delete product categories. | `admin/categories.php` using Product category methods. |
+| **Admin 5: Subcategories CRUD** | Manage product subcategories. | `admin/subcategories.php` using subcategory methods. |
+| **Admin 6: Customer Directory** | View registered customer accounts. | `admin/users.php` using `User::getAllUsers()`. |
+| **Admin 7: Delete Users** | Remove customer accounts. | `admin/users.php` using `User::deleteUser()`. |
+| **Admin 8: Update Users** | Update customer profile information. | `admin/users.php` using `User::updateUserInfo()`. |
+| **Admin 9: Orders History** | View all customer orders. | `admin/orders.php` using `Order::getAllOrders()`. |
+| **Admin 10: Approve / Cancel Orders** | Update order processing status. | `admin/orders.php` using `Order::updateStatus()`. |
+----
+# Screenshots
+
+## Customer Side
+
+### Home Page & Product Search
+![Home Page](screenshots/home.png)
+
+
+### User Registration
+![Registration](screenshots/register.png)
+
+
+### User Login
+![Login](screenshots/login.png)
+
+
+### Shopping Cart
+![Shopping Cart](screenshots/shopping_cart.png)
+
+
+### Add To Cart
+![Add To Cart](screenshots/add_to_cart.png)
+
+
+### Checkout & Payment Methods
+![Checkout](screenshots/checkout.png)
+
+
+### Order History & Status Tracking
+![My Orders](screenshots/my_orders.png)
+
+
+### Order Details & Receipt
+![Order Details](screenshots/order_details.png)
+
+
+### Customer Feedback
+![Feedback](screenshots/feedback.png)
+
+
+
+# Admin Panel
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+
+### Inventory Management
+![Inventory Management](screenshots/admin_manage_inventory.png)
+
+
+### Product Categories Management
+![Categories Management](screenshots/admin_manage_categories.png)
+
+
+### Subcategories Management
+![Subcategories Management](screenshots/admin_manage_subcategories.png)
+
+
+### Customer Management
+![User Management](screenshots/admin_manage_users.png)
+
+
+### Order Management
+![Order Management](screenshots/admin_manage_orders.png)
+
+----
 
 ## 🛠️ Installation & Setup Instructions
 
