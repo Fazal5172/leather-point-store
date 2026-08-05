@@ -117,6 +117,13 @@ This application is fully responsive and implements all functional specification
 
 ### Registration
 
+# Leather Point Store
+
+## Image Test
+
+<img src="https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/register.png?raw=true" width="700">
+
+
 ![Register](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/register.png?raw=true)
 
 
