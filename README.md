@@ -110,18 +110,51 @@ This application is fully responsive and implements all functional specification
 | **Admin 8: Update Users** | Update customer profile information. | `admin/users.php` using `User::updateUserInfo()`. |
 | **Admin 9: Orders History** | View all customer orders. | `admin/orders.php` using `Order::getAllOrders()`. |
 | **Admin 10: Approve / Cancel Orders** | Update order processing status. | `admin/orders.php` using `Order::updateStatus()`. |
-----
+---
+
 # Screenshots
 
 ## Customer Side
 
 ### Registration
 
-# Leather Point Store
+![Register](screenshots/register.png)
 
-## Image Test
+---
 
-<img src="https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/register.png?raw=true" width="700">
+### Login
+
+![Login](screenshots/login.png)
+
+---
+
+### Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+### Shopping Cart
+
+![Shopping Cart](screenshots/shopping_cart.png)
+
+---
+
+### Checkout
+
+![Checkout](screenshots/checkout.png)
+
+
+
+
+
+
+# Screenshots
+
+## Customer Side
+
+### Registration
+
 
 
 ![Register](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/register.png?raw=true)
