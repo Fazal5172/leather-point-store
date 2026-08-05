@@ -75,7 +75,7 @@ leather-point-store/
 │
 ├── schema.sql                # Database schema & sample data
 └── README.md                 # Professional project documentation
-
+```
 ---
 
 ## 📋 Functional Requirements Map
