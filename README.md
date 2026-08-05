@@ -118,7 +118,7 @@ This application is fully responsive and implements all functional specification
 
 ### Registration
 
-![Register](screenshots/register.png)
+![Register](./screenshots/register.png)
 
 ---
 
