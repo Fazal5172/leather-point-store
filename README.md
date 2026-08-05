@@ -75,11 +75,13 @@ leather-point-store/
 │
 ├── schema.sql                # Database schema & sample data
 └── README.md                 # Professional project documentation
+
 ---
 
 ## 📋 Functional Requirements Map
 
-This application is fully responsive and implements all functional specifications using clean OOP models:
+This application is fully responsive and implements all functional specifications using clean OOP models.
+
 # Functional Requirements
 
 ## Customer-Facing Requirements (FR)
@@ -110,15 +112,18 @@ This application is fully responsive and implements all functional specification
 | **Admin 8: Update Users** | Update customer profile information. | `admin/users.php` using `User::updateUserInfo()`. |
 | **Admin 9: Orders History** | View all customer orders. | `admin/orders.php` using `Order::getAllOrders()`. |
 | **Admin 10: Approve / Cancel Orders** | Update order processing status. | `admin/orders.php` using `Order::updateStatus()`. |
+
+
 ---
 
-# Screenshots
+# 📸 Screenshots
 
 ## Customer Side
 
 ### Registration
 
-![Register](./screenshots/register.png)
+![Register](screenshots/register.png)
+
 
 ---
 
@@ -126,17 +131,27 @@ This application is fully responsive and implements all functional specification
 
 ![Login](screenshots/login.png)
 
+
 ---
 
 ### Home Page
 
 ![Home](screenshots/home.png)
 
+
+---
+
+### Add To Cart
+
+![Add To Cart](screenshots/add_to_cart.png)
+
+
 ---
 
 ### Shopping Cart
 
 ![Shopping Cart](screenshots/shopping_cart.png)
+
 
 ---
 
@@ -145,89 +160,72 @@ This application is fully responsive and implements all functional specification
 ![Checkout](screenshots/checkout.png)
 
 
+---
+
+### Order History & Status
+
+![Order History](screenshots/my_orders.png)
 
 
-
-
-# Screenshots
-
-## Customer Side
-
-### Registration
-
-
-
-![Register](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/register.png?raw=true)
-
-
-### Login
-
-![Login](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/login.png?raw=true)
-
-
-### Home Page
-
-![Home](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/home.png?raw=true)
-
-
-### Shopping Cart
-
-![Shopping Cart](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/shopping_cart.png?raw=true)
-
-
-### Checkout
-
-![Checkout](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/checkout.png?raw=true)
-
-
-### Order History
-
-![Orders](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/my_orders.png?raw=true)
-
+---
 
 ### Order Details
 
-![Order Details](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/order_details.png?raw=true)
+![Order Details](screenshots/order_details.png)
 
 
-### Feedback
+---
 
-![Feedback](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/feedback.png?raw=true)
+### Customer Feedback
+
+![Feedback](screenshots/feedback.png)
 
 
 
-## Admin Panel
+---
 
+# Admin Panel
 
 ### Dashboard
 
-![Dashboard](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_dashboard.png?raw=true)
+![Dashboard](screenshots/admin_dashboard.png)
 
+
+---
 
 ### Inventory Management
 
-![Inventory](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_inventory.png?raw=true)
+![Inventory](screenshots/admin_manage_inventory.png)
 
+
+---
 
 ### Category Management
 
-![Categories](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_categories.png?raw=true)
+![Categories](screenshots/admin_manage_categories.png)
 
+
+---
 
 ### Subcategory Management
 
-![Subcategories](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_subcategories.png?raw=true)
+![Subcategories](screenshots/admin_manage_subcategories.png)
 
+
+---
 
 ### User Management
 
-![Users](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_users.png?raw=true)
+![Users](screenshots/admin_manage_users.png)
 
+
+---
 
 ### Order Management
 
-![Orders](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_orders.png?raw=true)
-----
+![Orders](screenshots/admin_manage_orders.png)
+
+---
 
 ## 🛠️ Installation & Setup Instructions
 
