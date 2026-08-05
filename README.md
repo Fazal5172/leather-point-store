@@ -115,68 +115,78 @@ This application is fully responsive and implements all functional specification
 
 ## Customer Side
 
-### Home Page & Product Search
-![Home Page](screenshots/home.png)
+### Registration
+
+![Register](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/register.png?raw=true)
 
 
-### User Registration
-![Registration](screenshots/register.png)
+### Login
+
+![Login](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/login.png?raw=true)
 
 
-### User Login
-![Login](screenshots/login.png)
+### Home Page
+
+![Home](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/home.png?raw=true)
 
 
 ### Shopping Cart
-![Shopping Cart](screenshots/shopping_cart.png)
+
+![Shopping Cart](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/shopping_cart.png?raw=true)
 
 
-### Add To Cart
-![Add To Cart](screenshots/add_to_cart.png)
+### Checkout
+
+![Checkout](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/checkout.png?raw=true)
 
 
-### Checkout & Payment Methods
-![Checkout](screenshots/checkout.png)
+### Order History
+
+![Orders](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/my_orders.png?raw=true)
 
 
-### Order History & Status Tracking
-![My Orders](screenshots/my_orders.png)
+### Order Details
+
+![Order Details](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/order_details.png?raw=true)
 
 
-### Order Details & Receipt
-![Order Details](screenshots/order_details.png)
+### Feedback
 
-
-### Customer Feedback
-![Feedback](screenshots/feedback.png)
+![Feedback](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/feedback.png?raw=true)
 
 
 
-# Admin Panel
+## Admin Panel
 
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin_dashboard.png)
+
+### Dashboard
+
+![Dashboard](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_dashboard.png?raw=true)
 
 
 ### Inventory Management
-![Inventory Management](screenshots/admin_manage_inventory.png)
+
+![Inventory](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_inventory.png?raw=true)
 
 
-### Product Categories Management
-![Categories Management](screenshots/admin_manage_categories.png)
+### Category Management
+
+![Categories](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_categories.png?raw=true)
 
 
-### Subcategories Management
-![Subcategories Management](screenshots/admin_manage_subcategories.png)
+### Subcategory Management
+
+![Subcategories](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_subcategories.png?raw=true)
 
 
-### Customer Management
-![User Management](screenshots/admin_manage_users.png)
+### User Management
+
+![Users](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_users.png?raw=true)
 
 
 ### Order Management
-![Order Management](screenshots/admin_manage_orders.png)
 
+![Orders](https://github.com/Fazal5172/leather-point-store/blob/main/screenshots/admin_manage_orders.png?raw=true)
 ----
 
 ## 🛠️ Installation & Setup Instructions
