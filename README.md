@@ -1,182 +1,332 @@
-# Leather Point Store 👜
+<p align="center">
 
-A professional, e-commerce web application developed in **Object-Oriented PHP (OOP)** and styled with modern, responsive **Tailwind CSS**.
+<h1 align="center">👜 Leather Point Store</h1>
+
+<p align="center">
+A full-stack e-commerce web application built with Core PHP (OOP), PDO, MySQL, and Tailwind CSS
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/PHP-8%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8+"/>
+
+<img src="https://img.shields.io/badge/MySQL-MariaDB-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+
+<img src="https://img.shields.io/badge/Tailwind-CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+
+<img src="https://img.shields.io/badge/Architecture-OOP-orange?style=for-the-badge" alt="OOP"/>
+
+<img src="https://img.shields.io/badge/Database-PDO-blue?style=for-the-badge" alt="PDO"/>
+
+</p>
+
+</p>
+
 
 ---
 
-## 🚀 Key Professional Features
-- **Object-Oriented Programming (OOP):** Complete business models encapsulated in standalone classes with robust encapsulation, property bindings, and modular constructor dependency injections.
-- **Secure Database Interactions:** Powered by **PHP Data Objects (PDO)** utilizing strictly parameterized, prepared statements to completely mitigate SQL injection risks.
-- **Secure Hashing:** Customer passwords are salted and hashed using modern `PASSWORD_BCRYPT` cryptographies.
-- **XSS Prevention:** Clean inputs sanitized dynamically using recursive string strips and `htmlspecialchars()` output encodings.
-- **Session-Based State Management:** Secure multi-role authentication controls separating Standard Users and Administrative Desk operators.
-- **Automatic Fallback Simulator ( recruiter-friendly ):** If a MySQL server is not configured, the site automatically enables an interactive **Session Mock DB Fallback mode** letting users register, log in, search, write reviews, check out, and administer orders in real-time completely out-of-the-box!
+# 📌 Overview
+
+**Leather Point Store** is a full-stack e-commerce web application developed using **Core PHP (Object-Oriented Programming), PDO, MySQL, and Tailwind CSS**.
+
+The application demonstrates real-world web development practices including:
+
+- Secure authentication
+- Role-based authorization
+- Product management
+- Shopping cart functionality
+- Checkout workflow
+- Order processing
+- Customer reviews
+- Administrative inventory management
+
+
+The project follows a modular OOP architecture where business logic is separated into reusable classes:
+
+| Class | Responsibility |
+|------|----------------|
+| `User` | Authentication, profiles and customer management |
+| `Product` | Product catalog and inventory operations |
+| `Order` | Checkout and order processing |
+| `Review` | Customer reviews and feedback management |
+
+
+The application is designed with a clean separation between:
+
+- Configuration
+- Database layer
+- Business logic
+- Presentation layer
+- Administrative operations
+
 
 ---
 
-## 📁 Repository Directory Structure
+# ✨ Key Features
+
+
+## 🔐 Authentication & Security
+
+- Secure customer registration and login
+- Role-based authentication for customers and administrators
+- Password encryption using `password_hash()` with `PASSWORD_BCRYPT`
+- PDO prepared statements for SQL injection prevention
+- XSS protection using sanitized output with `htmlspecialchars()`
+- Secure session-based state management
+
+
+---
+
+# 👤 Customer Features
+
+- Customer registration and authentication
+- Product catalog browsing
+- Multi-attribute product search:
+  - Product name
+  - Price
+  - Color
+- Product details with customer reviews
+- Shopping cart management
+- Checkout workflow
+- Payment method selection:
+  - Credit Card
+  - Cash on Delivery (COD)
+- Order tracking
+- Order history
+- Customer feedback submission
+- Transaction receipt simulation
+
+
+---
+
+# 🛡️ Admin Dashboard Features
+
+- Secure administrator authentication
+- Dashboard statistics and overview metrics
+- Product management:
+  - Add products
+  - Update products
+  - Delete products
+  - Manage inventory quantities
+- Category management
+- Subcategory management
+- Customer management
+- Order management:
+  - View orders
+  - Approve orders
+  - Cancel orders
+  - Update order status
+- Customer feedback management
+
+
+---
+
+# 🏗️ Architecture & Code Quality
+
+The application follows a modular Object-Oriented PHP architecture.
+
+Implemented concepts:
+
+- Object-Oriented Programming (OOP)
+- Encapsulation of business logic
+- Reusable PHP classes
+- Constructor dependency injection
+- PDO database abstraction
+- Centralized application initialization
+- Separation of application layers
+
+
+---
+
+# 📁 Repository Structure
+
+
 ```text
 leather-point-store/
+
 │
 ├── config/
-│   ├── app.php               # Application configuration (APP_URL & global settings)
-│   ├── bootstrap.php         # Centralized application initialization
-│   ├── Database.php          # Database Connection class (PDO Pattern)
-│   └── developer.php         # Developer contact & portfolio configuration
+│   ├── app.php
+│   │   # Application configuration and APP_URL settings
+│   │
+│   ├── bootstrap.php
+│   │   # Centralized application initialization
+│   │
+│   ├── Database.php
+│   │   # PDO database connection class
+│   │
+│   └── developer.php
+│       # Developer configuration
 │
 ├── classes/
-│   ├── User.php              # Authentication, profiles & customer management
-│   ├── Product.php           # Product catalog & inventory operations
-│   ├── Order.php             # Checkout, order processing & notifications
-│   └── Review.php            # Product ratings & customer reviews
+│   ├── User.php
+│   │   # Authentication and customer management
+│   │
+│   ├── Product.php
+│   │   # Product catalog and inventory operations
+│   │
+│   ├── Order.php
+│   │   # Checkout and order processing
+│   │
+│   └── Review.php
+│       # Product reviews and feedback
 │
 ├── includes/
-│   ├── init.php              # Customer application initialization
-│   ├── header.php            # Storefront navigation & page header
-│   ├── footer.php            # Footer layout & shared scripts
-│   └── contact-widget.php    # Floating developer contact widget
+│   ├── init.php
+│   │   # Customer application initialization
+│   │
+│   ├── header.php
+│   │   # Storefront navigation
+│   │
+│   ├── footer.php
+│   │   # Shared footer layout
+│   │
+│   └── contact-widget.php
+│       # Developer contact widget
 │
-├── admin/                    # Administrative Control Panel
+├── admin/
+│
 │   ├── includes/
-│   │   ├── init.php          # Admin application initialization & authorization
-│   │   ├── header.php        # Admin sidebar & dashboard layout
-│   │   └── footer.php        # Admin footer
-│   ├── categories.php        # Category CRUD management
-│   ├── dashboard.php         # Dashboard metrics & statistics
-│   ├── feedbacks.php         # Customer feedback management
-│   ├── logout.php            # Terminates admin session
-│   ├── orders.php            # Order approval & management
-│   ├── products.php          # Inventory & product management
-│   ├── subcategories.php     # Subcategory CRUD management
-│   └── users.php             # Customer directory management│
+│   │   ├── init.php
+│   │   ├── header.php
+│   │   └── footer.php
+│
+│   ├── dashboard.php
+│   ├── products.php
+│   ├── categories.php
+│   ├── subcategories.php
+│   ├── users.php
+│   ├── orders.php
+│   └── feedbacks.php
+│
 ├── assets/
 │   ├── css/
-│   │   └── contact-widget.css    # Floating contact widget styles
+│   │   └── contact-widget.css
+│   │
 │   └── js/
-│       └── contact-widget.js     # Floating contact widget interactions
+│       └── contact-widget.js
 │
-├── downloads/
-│   └── Fazal-Abbas-Shah-Resume.pdf    # Downloadable resume
+├── screenshots/
+│   # Project screenshots
 │
 ├── logs/
-│   └── receipt_notifications.log      # Simulated SMS & Email notification logs
+│   └── receipt_notifications.log
+│       # Simulated transaction logs
 │
-├── screenshots/              # README project screenshots
+├── downloads/
+│   └── Fazal-Abbas-Shah-Resume.pdf
 │
-├── index.php                 # Storefront catalog & product listing (FR3)
-├── product-details.php       # Product details & review page (FR7)
-├── cart.php                  # Shopping cart
-├── checkout.php              # Checkout & payment selection (FR4)
-├── order-status.php          # Order tracking & printable receipt (FR5, FR8)
-├── feedback.php              # Customer feedback submission (FR7)
-├── login.php                 # Secure user authentication (FR2)
-├── register.php              # Customer registration (FR1)
-├── logout.php                # User/Admin logout & session termination
+├── index.php
+├── product-details.php
+├── cart.php
+├── checkout.php
+├── order-status.php
+├── feedback.php
+├── login.php
+├── register.php
+├── logout.php
 │
-├── schema.sql                # Database schema & sample data
-└── README.md                 # Professional project documentation
-```
----
-
-## 📋 Functional Requirements Map
-
-This application is fully responsive and implements all functional specifications using clean OOP models.
-
-# Functional Requirements
-
-## Customer-Facing Requirements (FR)
-
-| Requirement ID | Description | OOP Implementation Path |
-| :--- | :--- | :--- |
-| **FR1: Registration** | Create a registration page for new users. | `register.php` using `User::register()` with secure password hashing. |
-| **FR2: Login** | Secure user authentication using stored credentials. | `login.php` using `User::login()` with password verification. |
-| **FR3: Search Box** | Multi-attribute product search by name, price, and color. | `index.php` using `Product::getProducts()` with dynamic SQL conditions. |
-| **FR4: Payment Methods** | Support Credit Card and Cash On Delivery (COD). | `checkout.php` storing selected payment methods with order records. |
-| **FR5: Order Status** | Customers can track order shipment status (Approved/Pending/Cancel). | `order-status.php` using `Order::getOrderDetails()`. |
-| **FR6: Order History** | Display customer's complete purchase history. | `order-status.php` using `Order::getUserOrders()`. |
-| **FR7: Reviews & Feedbacks** | Users can submit product reviews and website feedback. | `product-details.php` and `feedback.php` using Review methods. |
-| **FR8: Confirm Receipt** | Simulate transaction receipt notification logging. | `Order::simulateTransactionReceipt()` storing receipt notification logs. |
-
-
-## Administrative Requirements (Admin)
-
-| Requirement ID | Description | OOP Implementation Path |
-| :--- | :--- | :--- |
-| **Admin 1: Admin Login** | Secure administrator authentication. | `admin/includes/header.php` with role verification. |
-| **Admin 2: Stock Management** | Manage product prices, specifications, images, colors, and quantities. | `admin/products.php` using Product CRUD methods. |
-| **Admin 3: Dashboard Metrics** | View users, orders, categories, and feedback statistics. | `admin/dashboard.php` with database statistics queries. |
-| **Admin 4: Categories CRUD** | Create, update, and delete product categories. | `admin/categories.php` using Product category methods. |
-| **Admin 5: Subcategories CRUD** | Manage product subcategories. | `admin/subcategories.php` using subcategory methods. |
-| **Admin 6: Customer Directory** | View registered customer accounts. | `admin/users.php` using `User::getAllUsers()`. |
-| **Admin 7: Delete Users** | Remove customer accounts. | `admin/users.php` using `User::deleteUser()`. |
-| **Admin 8: Update Users** | Update customer profile information. | `admin/users.php` using `User::updateUserInfo()`. |
-| **Admin 9: Orders History** | View all customer orders. | `admin/orders.php` using `Order::getAllOrders()`. |
-| **Admin 10: Approve / Cancel Orders** | Update order processing status. | `admin/orders.php` using `Order::updateStatus()`. |
-
+├── schema.sql
+│   # Database schema and sample data
+│
+└── README.md
 
 ---
 
 # 📸 Screenshots
 
-## Customer Side
+The following screenshots demonstrate the main customer-facing and administrative workflows of the application.
 
-### Registration
+
+# 👤 Customer Side
+
+
+## 📝 Registration
+
+Secure customer registration with password hashing and account creation.
 
 ![Register](screenshots/register.png)
 
 
 ---
 
-### Login
+
+## 🔐 Login
+
+Authentication system with session-based access control.
 
 ![Login](screenshots/login.png)
 
 
 ---
 
-### Home Page
+
+## 🏠 Store Homepage
+
+Product catalog displaying available leather products with search functionality.
 
 ![Home](screenshots/home.png)
 
 
 ---
 
-### Add To Cart
+
+## 🛒 Add To Cart
+
+Customers can add products to their shopping cart before checkout.
 
 ![Add To Cart](screenshots/add_to_cart.png)
 
 
 ---
 
-### Shopping Cart
+
+## 🛍️ Shopping Cart
+
+Cart management with product quantities and order summary.
 
 ![Shopping Cart](screenshots/shopping_cart.png)
 
 
 ---
 
-### Checkout
+
+## 💳 Checkout
+
+Checkout workflow supporting multiple payment methods:
+
+- Credit Card
+- Cash on Delivery (COD)
 
 ![Checkout](screenshots/checkout.png)
 
 
 ---
 
-### Order History & Status
+
+## 📦 Order History & Status
+
+Customers can view previous purchases and track order processing status.
 
 ![Order History](screenshots/my_orders.png)
 
 
 ---
 
-### Order Details
+
+## 🧾 Order Details
+
+Detailed order information with transaction receipt simulation.
 
 ![Order Details](screenshots/order_details.png)
 
 
 ---
 
-### Customer Feedback
+
+## ⭐ Customer Feedback
+
+Customers can submit product reviews and website feedback.
 
 ![Feedback](screenshots/feedback.png)
 
@@ -184,73 +334,223 @@ This application is fully responsive and implements all functional specification
 
 ---
 
-# Admin Panel
 
-### Dashboard
+# 🛡️ Admin Panel
+
+
+## 📊 Admin Dashboard
+
+Administrative overview displaying:
+
+- Users
+- Orders
+- Products
+- Categories
+- Feedback statistics
 
 ![Dashboard](screenshots/admin_dashboard.png)
 
 
 ---
 
-### Inventory Management
+
+## 📦 Inventory Management
+
+Manage product information including:
+
+- Product names
+- Prices
+- Images
+- Colors
+- Specifications
+- Stock quantities
 
 ![Inventory](screenshots/admin_manage_inventory.png)
 
 
 ---
 
-### Category Management
+
+## 🗂️ Category Management
+
+Create, update, and delete product categories.
 
 ![Categories](screenshots/admin_manage_categories.png)
 
 
 ---
 
-### Subcategory Management
+
+## 📂 Subcategory Management
+
+Manage product subcategories.
 
 ![Subcategories](screenshots/admin_manage_subcategories.png)
 
 
 ---
 
-### User Management
+
+## 👥 Customer Management
+
+View and manage registered customer accounts.
 
 ![Users](screenshots/admin_manage_users.png)
 
 
 ---
 
-### Order Management
+
+## 📋 Order Management
+
+Approve, cancel, and update customer order statuses.
 
 ![Orders](screenshots/admin_manage_orders.png)
 
----
 
-## 🛠️ Installation & Setup Instructions
-
-### 1. Database Setup (MySQL)
-1. Open your database administration dashboard (e.g., **phpMyAdmin** or **MySQL Workbench**).
-2. Create a new database named `leather_point_db`.
-3. Import the `schema.sql` file into your newly created database.
-
-### 2. Configure PHP Connection
-1. Open `config/Database.php`.
-2. Update your credentials (host, user, password, database name) inside the private properties:
-   ```php
-   private $host = "localhost";
-   private $db_name = "leather_point_db";
-   private $username = "root";
-   private $password = ""; // your DB password
-   ```
-
-### 3. Quick Run Credentials
-Use these pre-seeded users to test out both roles immediately:
-- **Customer User Account:**
-  - **Email:** `user@gmail.com`
-  - **Password:** `userpassword`
-- **Administrator Account:**
-  - **Email:** `admin@leatherpoint.com`
-  - **Password:** `adminpassword`
 
 ---
+
+# 🛠️ Tech Stack
+
+
+| Layer | Technology |
+|------|------------|
+| Backend | Core PHP 8+ (Object-Oriented Programming) |
+| Database | MySQL / MariaDB |
+| Database Layer | PDO with Prepared Statements |
+| Frontend | HTML5, Tailwind CSS, JavaScript |
+| Authentication | PHP Sessions + bcrypt password hashing |
+| Server | Apache (XAMPP/WAMP/Laragon) |
+| Version Control | Git & GitHub |
+
+
+---
+
+# 🚀 Installation & Setup Instructions
+
+
+## Prerequisites
+
+Before running the project locally, ensure the following are installed:
+
+- PHP 8.0 or higher
+- MySQL 5.7+ / MariaDB
+- Apache Server (XAMPP, WAMP, or Laragon)
+- Git
+
+
+---
+
+# 1. Clone Repository
+
+
+```bash
+git clone https://github.com/Fazal5172/leather-point-store.git
+
+cd leather-point-store
+
+
+---
+
+# 🌐 Live Demo
+
+
+The application is deployed online and available for portfolio evaluation.
+
+You can explore both customer and administrator workflows using the demo credentials provided below.
+
+
+| Portal | URL |
+|--------|-----|
+| 👤 Customer Store | https://leatherstore.lovestoblog.com |
+| 🛡️ Admin Dashboard | https://leatherstore.lovestoblog.com/admin |
+
+
+> **Note:**  
+> This is a public demonstration environment created for portfolio evaluation.  
+> Demo data may be reset periodically.
+
+
+
+---
+
+# 🔑 Demo Login Credentials
+
+
+## 👤 Customer Account
+
+
+| Role | Email | Password |
+|------|-------|----------|
+| Customer | user@gmail.com | `userpassword` |
+
+
+Customer can explore:
+
+- Product browsing
+- Product search
+- Shopping cart
+- Checkout workflow
+- Order tracking
+- Order history
+- Reviews and feedback
+
+
+
+---
+
+
+## 🛡️ Administrator Account
+
+
+| Role | Email | Password |
+|------|-------|----------|
+| Administrator | admin@leatherpoint.com | `adminpassword` |
+
+
+Administrator can explore:
+
+- Dashboard statistics
+- Product management
+- Inventory management
+- Category management
+- Subcategory management
+- Customer management
+- Order processing
+- Feedback management
+
+
+
+> ⚠️ **Important:**  
+> Demo credentials are provided only for evaluation purposes.  
+> Change all passwords before using the application in a production environment.
+
+
+
+---
+
+# 👨‍💻 Author
+
+
+**Fazal Abbas Shah**
+
+PHP Developer | Backend Web Developer
+
+
+### GitHub
+
+https://github.com/Fazal5172
+
+
+### LinkedIn
+
+https://www.linkedin.com/in/fazal111/
+
+
+---
+
+# 📄 License
+
+
+This project is licensed under the MIT License.
