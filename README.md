@@ -445,7 +445,7 @@ Before running the project locally, ensure the following are installed:
 # 1. Clone Repository
 
 
-```bash
+
 git clone https://github.com/Fazal5172/leather-point-store.git
 
 cd leather-point-store
