@@ -230,7 +230,7 @@ leather-point-store/
 │   # Database schema and sample data
 │
 └── README.md
-
+```
 ---
 
 # 📸 Screenshots
