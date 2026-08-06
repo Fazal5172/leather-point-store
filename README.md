@@ -455,7 +455,6 @@ cd leather-point-store
 
 # 🌐 Live Demo
 
-
 The application is deployed online and available for portfolio evaluation.
 
 You can explore both customer and administrator workflows using the demo credentials provided below.
